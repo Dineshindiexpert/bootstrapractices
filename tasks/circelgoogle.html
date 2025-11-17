@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Spinner</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            /* Adjust size as needed */
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            /* Light grey border */
+            border-top: 8px solid #3498db;
+            /* Blue top border for the spinning effect */
+            border-radius: 50%;
+            /* Makes it a circle */
+            width: 60px;
+            /* Inner width of the spinner */
+            height: 60px;
+            /* Inner height of the spinner */
+            animation: spin 1s linear infinite;
+            /* Animation properties */
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-container">
+        <div class="loader"></div>
+    </div>
+</body>
+
+</html>
