@@ -4,44 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading Spinner</title>
-    <link rel="stylesheet" href="style.css">
+    <title>All Spinners Demo</title>
+
     <style>
         body {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f0f0f0;
-            margin: 0;
+            background: #f0f0f0;
             font-family: sans-serif;
+            gap: 40px;
+            padding: 20px;
+            margin: 0;
         }
 
-        .spinner-container {
+        h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .box {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            width: 100px;
-            /* Adjust size as needed */
-            height: 100px;
-            /* Adjust size as needed */
+            gap: 15px;
         }
 
-        .loader {
-            border: 8px solid #f3f3f3;
-            /* Light grey border */
+        /* -------------------------------------- */
+        /* 1. SIMPLE SPINNER */
+        /* -------------------------------------- */
+        .loader-simple {
+            border: 8px solid #ccc;
             border-top: 8px solid #3498db;
-            /* Blue top border for the spinning effect */
             border-radius: 50%;
-            /* Makes it a circle */
             width: 60px;
-            /* Inner width of the spinner */
             height: 60px;
-            /* Inner height of the spinner */
             animation: spin 1s linear infinite;
-            /* Animation properties */
         }
 
+        /* -------------------------------------- */
+        /* 2. GLOW EFFECT SPINNER */
+        /* -------------------------------------- */
+        .loader-glow {
+            border: 8px solid #ccc;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 15px rgba(52, 152, 219, 0.7);
+        }
+
+        /* -------------------------------------- */
+        /* 3. DUAL COLOR SPINNER */
+        /* -------------------------------------- */
+        .loader-dual {
+            border: 8px solid transparent;
+            border-top: 8px solid #e74c3c;
+            border-right: 8px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+
+        /* -------------------------------------- */
+        /* 4. DASHED SPINNER */
+        /* -------------------------------------- */
+        .loader-dashed {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 6px dashed #3498db;
+            border-top-color: #e67e22;
+            animation: spin 0.9s linear infinite;
+        }
+
+        /* -------------------------------------- */
+        /* 5. PULSE + SPIN SPINNER */
+        /* -------------------------------------- */
+        .loader-pulse {
+            width: 60px;
+            height: 60px;
+            border: 8px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite, pulse 1.4s ease-in-out infinite;
+        }
+
+        /* -------------------------------------- */
+        /* KEYFRAMES */
+        /* -------------------------------------- */
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -51,13 +106,49 @@
                 transform: rotate(360deg);
             }
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.25);
+                opacity: 0.5;
+            }
+        }
     </style>
+
 </head>
 
 <body>
-    <div class="spinner-container">
-        <div class="loader"></div>
+
+    <div class="box">
+        <h2>1. Simple Spinner</h2>
+        <div class="loader-simple"></div>
     </div>
+
+    <div class="box">
+        <h2>2. Glow Effect Spinner</h2>
+        <div class="loader-glow"></div>
+    </div>
+
+    <div class="box">
+        <h2>3. Dual Color Spinner</h2>
+        <div class="loader-dual"></div>
+    </div>
+
+    <div class="box">
+        <h2>4. Dashed Spinner</h2>
+        <div class="loader-dashed"></div>
+    </div>
+
+    <div class="box">
+        <h2>5. Pulse + Spin Spinner</h2>
+        <div class="loader-pulse"></div>
+    </div>
+
 </body>
 
 </html>

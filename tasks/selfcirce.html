@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Moving Circles</title>
+
+    <style>
+         
+        .circle {
+            height: 120px;
+            width: 120px;
+            border: 10px solid blue;
+            border-radius: 50%;
+            border-left: none;
+            animation: moveUpDown 0.2s ease-in-out infinite alternate;
+            margin-left: 25px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+
+        .circle2 {
+            height: 120px;
+            width: 120px;
+            border: 10px solid red;
+            border-radius: 50%;
+            border-left: none;
+            animation: moveUpDown1 0.2s ease-in-out infinite alternate;
+            left: 25px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+
+
+          
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(-50px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(50px) rotate(360deg);
+            }
+        }
+
+        @keyframes moveUpDown1 {
+            0% {
+                transform: translateY(50px) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-50px) rotate(360deg);
+            }
+        }
+
+         
+        .square{
+            height: 120px;
+            width: 120px;
+            border: 15px solid #2d2a28;
+            border-radius: 25%;
+            margin: 10px;
+           box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+        .square{
+            height: 120px;
+            width: 120px;
+            border: 15px solid #2d2a28;
+            border-radius: 25%;
+            margin: 10px;
+           box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+        .square1 {
+            height: 120px;
+            width: 120px;
+            border: 15px solid #f1c100;
+            border-radius: 25%;
+            margin: 10px;
+            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+        }
+
+        .square {
+            animation: rotate 1s linear infinite;
+        }
+
+        .square1 {
+            animation: rotate1 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate1 {
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 80px;
+        }
+
+        .center-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+         
+    </style>
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+         
+        <div class="circle "></div>
+        <div class="circle2"></div>
+
+         
+         
+        <div class="allsquare ">
+            <div class="center-row">
+                
+                <div class="square"></div>
+                <div class="square1"></div>
+                <div class="square"></div>
+                <div class="square1"></div>
+            </div>
+            <div class="center-row">
+                <div class="square"></div>
+                <div class="square1"></div>
+                <div class="square"></div>
+                <div class="square1"></div>
+            </div>
+        </div>
+
+
+
+         
+        <div class="circle"></div>
+        <div class="circle2"></div>
+
+    </div>
+
+</body>
+
+</html>
