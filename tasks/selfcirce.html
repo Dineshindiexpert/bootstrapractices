@@ -13,10 +13,11 @@
             width: 120px;
             border: 10px solid blue;
             border-radius: 50%;
-            border-left: none;
-            animation: moveUpDown 0.2s ease-in-out infinite alternate;
+            border-left-color: transparent;
+            animation: moveUpDown 1s ease-in-out infinite alternate;
             margin-left: 25px;
-            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+            
+            
         }
 
         .circle2 {
@@ -24,21 +25,21 @@
             width: 120px;
             border: 10px solid red;
             border-radius: 50%;
-            border-left: none;
-            animation: moveUpDown1 0.2s ease-in-out infinite alternate;
+            border-left-color: transparent;
+            animation: moveUpDown1 1s ease-in-out infinite alternate;
             left: 25px;
-            box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+             
         }
 
 
           
         @keyframes moveUpDown {
             0% {
-                transform: translateY(-50px) rotate(0deg);
+                transform: translateY(-50px) rotate(-0deg);
             }
 
             100% {
-                transform: translateY(50px) rotate(360deg);
+                transform: translateY(50px) rotate(-360deg);
             }
         }
 
@@ -121,7 +122,7 @@
     <div class="main-wrapper">
 
          
-        <div class="circle "></div>
+        <div class="circle"></div>
         <div class="circle2"></div>
 
          
