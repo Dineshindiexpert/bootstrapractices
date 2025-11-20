@@ -4,55 +4,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
+    <title>Navbar + Search Icon Toggle</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Search Animation */
+        .search-box {
+            width: 0;
+            opacity: 0;
+            transition: 0.4s;
+            border: none;
+        }
+
+        .search-box.open {
+            width: 180px;
+            opacity: 1;
+            padding: 5px 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .search-icon-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
     <main>
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <img class="me-5" src="../images/download.png" alt="">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Dropdown link
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary " >
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logomain.jpg" alt="Bootstrap" width="50" height="30">
+                </a>
+                 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav  ms-5 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active " aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="btn-group">
+                                <a href="https://www.youtube.com" class="btn">
+                                    Dropdown
                                 </a>
+                                <button type="button" class="btn  dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                </button>
+
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=PfQfS6WszNQ&list=RDALUK2vnYUW4&index=5">tap please</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=ALUK2vnYUW4&list=RDALUK2vnYUW4&index=1">something new</a></li>
+                                    <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=LaxQq567f1I&list=RDALUK2vnYUW4&index=2">Something else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="https://chatgpt.com/">Separated link</a></li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link " aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
-            
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </nav>
+            </div>
+        </nav>
+
+        <!-- CAROUSEL -->
+        <div id="carouselExampleAutoplaying" class="carousel slide mt-3" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../images/camera.jpg" class="d-block w-100" alt="cam">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/alone.jpg" class="d-block w-100" alt="">
+                </div>
+                <div class="carousel-item">
+                    <img src="../images/spaarow.jpg" class="d-block w-100" alt="">
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
+
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const searchBtn = document.getElementById("searchBtn");
+        const searchInput = document.getElementById("searchInput");
+
+        searchBtn.addEventListener("click", () => {
+            searchInput.classList.toggle("open");
+
+            if (searchInput.classList.contains("open")) {
+                searchInput.focus();
+            }
+        });
+    </script>
+
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar task</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        nav.navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        .carousel-inner img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        img,
+        svg {
+            vertical-align: middle;
+            height: 26px;
+
+        }
+
+        element.style {
+            width: 300px;
+            position: relative;
+            top: -55px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <picture>
+                        <img src="../images/tigers.webp" class="d-block w-100 img-fluid" alt="Camera">
+                    </picture>
+                </div>
+
+                <div class="carousel-item">
+                    <picture>
+                        <img src="../images/alone.jpg" class="d-block w-100 img-fluid" alt="Alone">
+                    </picture>
+                </div>
+
+                <div class="carousel-item">
+                    <picture>
+                        <img src="../images/spaarow.jpg" class="d-block w-100 img-fluid" alt="Sparrow">
+                    </picture>
+                </div>
+
+                <div class="carousel-item">
+                    <picture>
+                        <img src="../images/final1.jpg" class="d-block w-100 img-fluid" alt="Final1">
+                    </picture>
+                </div>
+
+                <div class="carousel-item">
+                    <picture>
+                        <img src="../images/final2.jpg" class="d-block w-100 img-fluid" alt="Final2">
+                    </picture>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/logomain.jpg" alt="Logo" width="50" height="30">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-5 me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">contact us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <div class="btn-group">
+                                <a href="https://www.youtube.com" class="btn">services</a>
+                                <button type="button" class="btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"></button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item"
+                                            href="https://www.youtube.com/watch?v=PfQfS6WszNQ&list=RDALUK2vnYUW4&index=5">tap
+                                            please</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://www.youtube.com/watch?v=ALUK2vnYUW4&list=RDALUK2vnYUW4&index=1">something
+                                            new</a></li>
+                                    <li><a class="dropdown-item"
+                                            href="https://www.youtube.com/watch?v=LaxQq567f1I&list=RDALUK2vnYUW4&index=2">Something
+                                            else here</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="https://chatgpt.com/">Separated link</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">about us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-disabled="true">login/registeration</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex align-items-center m-0 p-0">
+
+                        <div class="position-relative">
+
+                            <!-- COLLAPSED SMALL ICON -->
+                            <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#expandSearch" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg>
+                            </button>
+
+                            <!-- FULL SEARCH BAR (icon inside input) -->
+                            <div class="collapse collapse-horizontal position-absolute top-50 translate-middle-y end-100"
+                                id="expandSearch">
+
+                                <div class="card card-body p-1" style="width: 260px;">
+
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search...">
+
+                                        <button class="btn btn-outline-secondary" type="submit">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </ul>
+
+                    </ul>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+        <!-- SEARCH FORM -->
+        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#searchModal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+            </svg>
+        </button>
+
+        <!-- MODAL -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Google Search Results</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body p-0">
+                        <iframe id="searchIframe" src="" width="100%" height="600px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const form = document.getElementById('googleSearchForm');
+            const iframe = document.getElementById('searchIframe');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const query = document.getElementById('searchInput').value;
+                iframe.src = "https://www.google.com/search?q=" + encodeURIComponent(query);
+                const modal = new bootstrap.Modal(document.getElementById('searchModal'));
+                modal.show();
+            });
+        </script>
+
+    </main>
+    <script async src="https://cse.google.com/cse.js?cx=14b9f0c91ea3e4f06"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
